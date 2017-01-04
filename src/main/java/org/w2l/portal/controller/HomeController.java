@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 @Controller
+@RequestMapping(value = "/home")
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -22,22 +23,46 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-//		Date date = new Date();
-//		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-//		
-//		String formattedDate = dateFormat.format(date);
-//		
-//		model.addAttribute("serverTime", formattedDate );
-		
-		
-		logger.info("test");
-		logger.info("end ...");
+		logger.info("Into home index...");
 		
 		return "index";
+	}
+	
+	@RequestMapping(value = "/wedding", method = RequestMethod.GET)
+	public String wedding(Locale locale, Model model) {
+		logger.info("Into home index...");
+		
+		return "wedding";
+	}
+	
+	@RequestMapping(value = "/sports", method = RequestMethod.GET)
+	public String sports(Locale locale, Model model) {
+		logger.info("Into home sports...");
+		
+		return "sports";
+	}
+	
+	@RequestMapping(value = "/industrial", method = RequestMethod.GET)
+	public String industrial(Locale locale, Model model) {
+		logger.info("Into home industrial...");
+		
+		return "industrial";
+	}
+	
+	@RequestMapping(value = "/fashion", method = RequestMethod.GET)
+	public String fashion(Locale locale, Model model) {
+		logger.info("Into home fashion...");
+		
+		return "fashion";
+	}
+	
+	@RequestMapping(value = "/agriculture", method = RequestMethod.GET)
+	public String agriculture(Locale locale, Model model) {
+		logger.info("Into home agriculture...");
+		
+		return "agriculture";
 	}
 	
 }

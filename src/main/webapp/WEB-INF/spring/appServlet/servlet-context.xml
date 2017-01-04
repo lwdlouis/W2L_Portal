@@ -40,6 +40,4 @@
 	
 	<context:component-scan base-package="org.w2l.portal" />
 	
-	
-	
 </beans:beans>
