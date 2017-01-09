@@ -32,7 +32,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/wedding", method = RequestMethod.GET)
 	public String wedding(Locale locale, Model model) {
-		logger.info("Into home index...");
+		logger.info("Into home wedding...");
 		
 		return "wedding";
 	}
